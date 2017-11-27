@@ -41,7 +41,7 @@ RUN chmod a+x /start.sh \
     && npm install \
     && rm -rf /riot-web/node_modules/phantomjs-prebuilt/phantomjs \
     && GIT_VEC=$(git ls-remote https://github.com/vector-im/riot-web $BV_VEC | cut -f 1) \
-    && echo "riot:  $BV_VEC ($GIT_VEC)" > /synapse.version \
+    && echo "riot:  $BV_VEC ($GIT_VEC)" > /riot.version \
     && npm run build \
     || exit 1 \
     ; \
